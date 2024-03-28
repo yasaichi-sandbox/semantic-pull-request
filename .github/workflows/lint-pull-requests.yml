@@ -17,13 +17,14 @@ jobs:
       - name: Validate a title
         uses: amannn/action-semantic-pull-request@v5
         with:
+          types: ""
           scopes: |
             PRA-\d+
           requireScope: true
           ignoreLabels: |
             bot
             ignore-semantic-pull-request
-          headerPattern: '^(PRA-\d+)(.*)$'
+          headerPattern: '^(ABC-\d+)(.*)$'
           headerPatternCorrespondence: scope, subject
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
